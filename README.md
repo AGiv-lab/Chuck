@@ -1,5 +1,6 @@
 # Chuck
 Archived Chuck Norris Phenomenon- Movies, Memes, and Mayhem
+
 # 🐉 CHUCK — World Phenomenon
 
 ## 👤 Author
