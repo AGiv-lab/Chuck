@@ -47,6 +47,38 @@ body {
   box-sizing: border-box;
 }
 
+/* ── Carousel Images ── */
+
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-1 {
+  background-image: url("../img/karate.png");
+}
+
+.slide-2 {
+  background-image: url("../img/deltaforce.png");
+}
+
+.slide-3 {
+  background-image: url("../img/death.png");
+}
+
+.slide-4 {
+  background-image: url("../img/finger.png");
+}
+
+.slide-5 {
+  background-image: url("../img/phone.png");
+}
+
 .carousel-dots {
   display: flex;
   justify-content: center;
