@@ -148,7 +148,7 @@ function handleVote(event) {
   const selected = document.querySelector('input[name="sensei"]:checked');
 
   if (!selected) {
-    voteResponse.textContent = "You must choose a Sensei.";
+    voteResponse.textContent = "You must choose a sensei.";
     return;
   }
 
@@ -186,3 +186,4 @@ if (voteForm) {
 // =========================
 
 renderInitialFacts();
+
