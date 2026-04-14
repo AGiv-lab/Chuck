@@ -63,6 +63,9 @@ const voteForm = document.getElementById("vote-form");
 const voteResponse = document.getElementById("vote-response");
 const submitVoteBtn = document.getElementById("submit-vote-btn");
 
+const videoPlayer = document.getElementById("video-player");
+const videoButtons = document.querySelectorAll(".video-controls button");
+
 // =========================
 // Functions
 // =========================
@@ -189,6 +192,13 @@ if (threatForm) {
 if (voteForm) {
   voteForm.addEventListener("submit", handleVote);
 }
+
+videoButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const videoId = button.getAttribute("data-video");
+    videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+  });
+});
 
 // =========================
 // Initial Render

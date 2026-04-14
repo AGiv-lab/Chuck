@@ -155,7 +155,7 @@ body {
 
 /* ── Facts ── */
 .facts-table-wrapper {
-  max-height: 260px;
+  max-height: 360px;
   overflow-y: auto;
 }
 
@@ -233,8 +233,28 @@ body {
 
 /* ── Video ── */
 .video-frame iframe {
-  border: 0;
-  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.video-controls button {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+}
+
+.video-controls button:hover {
+  background: #555;
 }
 
 /* ── Footer ── */
