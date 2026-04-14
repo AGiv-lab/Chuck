@@ -56,11 +56,17 @@ const addFactButton = document.getElementById("add-fact-btn");
 const userFactInput = document.getElementById("user-fact");
 const userTypeInput = document.getElementById("user-type");
 
+const threatForm = document.getElementById("threat-form");
+const threatResponse = document.getElementById("threat-response");
+
+const voteForm = document.getElementById("vote-form");
+const voteResponse = document.getElementById("vote-response");
+const submitVoteBtn = document.getElementById("submit-vote-btn");
+
 // =========================
 // Functions
 // =========================
 
-// Add one fact as a new row in the table
 function addFactToTable(factObj) {
   const row = document.createElement("tr");
 
@@ -73,7 +79,6 @@ function addFactToTable(factObj) {
   factsTableBody.appendChild(row);
 }
 
-// Show the original 7 facts when the page first loads
 function renderInitialFacts() {
   factsTableBody.innerHTML = "";
 
@@ -82,7 +87,6 @@ function renderInitialFacts() {
   }
 }
 
-// Add one random fact as a new row
 function renderRandomFact() {
   const randomIndex = Math.floor(Math.random() * facts.length);
   const randomFact = facts[randomIndex];
@@ -90,7 +94,6 @@ function renderRandomFact() {
   addFactToTable(randomFact);
 }
 
-// Add a user-submitted fact to the end of the array and table
 function addUserFact() {
   const factText = userFactInput.value.trim();
   const factType = userTypeInput.value.trim();
@@ -125,6 +128,38 @@ function addUserFact() {
   }
 }
 
+function updateThreatResponse(event) {
+  const selectedValue = event.target.value;
+
+  if (selectedValue === "mild") {
+    threatResponse.textContent = "Threat contained.";
+  } else if (selectedValue === "ponytail") {
+    threatResponse.textContent = "Caution: slick-back levels rising.";
+  } else if (selectedValue === "dvd") {
+    threatResponse.textContent = "Direct-to-DVD danger detected.";
+  } else if (selectedValue === "nemesis") {
+    threatResponse.textContent = "NEMESIS MODE CONFIRMED. GUARD YOUR DOJO.";
+  }
+}
+
+function handleVote(event) {
+  event.preventDefault();
+
+  const selected = document.querySelector('input[name="sensei"]:checked');
+
+  if (!selected) {
+    voteResponse.textContent = "You must choose a Sensei.";
+    return;
+  }
+
+  if (selected.value === "chuck") {
+    voteResponse.textContent = "Correct. There was never a choice.";
+  } else if (selected.value === "bruce") {
+    voteResponse.textContent = "Respect. The dragon approves.";
+  } else if (selected.value === "seagal") {
+    voteResponse.textContent = "Incorrect. You have angered Sensei Seagal, look behind you.";
+  }
+}
 
 // =========================
 // Event Listeners
@@ -142,26 +177,10 @@ if (threatForm) {
   threatForm.addEventListener("change", updateThreatResponse);
 }
 
-const threatForm = document.getElementById("threat-form");
-const threatResponse = document.getElementById("threat-response");
-
-function updateThreatResponse(event) {
-  const selectedValue = event.target.value;
-
-  if (selectedValue === "mild") {
-    threatResponse.textContent = "Threat contained.";
-  } else if (selectedValue === "ponytail") {
-    threatResponse.textContent = "Caution: slick-back levels rising.";
-  } else if (selectedValue === "dvd") {
-    threatResponse.textContent = "Direct-to-DVD danger detected.";
-  } else if (selectedValue === "nemesis") {
-    threatResponse.textContent = "NEMESIS MODE CONFIRMED. GUARD YOUR DOJO.";
-  }
+if (voteForm) {
+  voteForm.addEventListener("submit", handleVote);
 }
 
-if (threatForm) {
-  threatForm.addEventListener("change", updateThreatResponse);
-}
 // =========================
 // Initial Render
 // =========================
