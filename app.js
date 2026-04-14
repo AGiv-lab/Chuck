@@ -125,6 +125,7 @@ function addUserFact() {
   }
 }
 
+
 // =========================
 // Event Listeners
 // =========================
@@ -137,6 +138,30 @@ if (addFactButton) {
   addFactButton.addEventListener("click", addUserFact);
 }
 
+if (threatForm) {
+  threatForm.addEventListener("change", updateThreatResponse);
+}
+
+const threatForm = document.getElementById("threat-form");
+const threatResponse = document.getElementById("threat-response");
+
+function updateThreatResponse(event) {
+  const selectedValue = event.target.value;
+
+  if (selectedValue === "mild") {
+    threatResponse.textContent = "Threat contained.";
+  } else if (selectedValue === "ponytail") {
+    threatResponse.textContent = "Caution: slick-back levels rising.";
+  } else if (selectedValue === "dvd") {
+    threatResponse.textContent = "Direct-to-DVD danger detected.";
+  } else if (selectedValue === "nemesis") {
+    threatResponse.textContent = "NEMESIS MODE CONFIRMED. GUARD YOUR DOJO.";
+  }
+}
+
+if (threatForm) {
+  threatForm.addEventListener("change", updateThreatResponse);
+}
 // =========================
 // Initial Render
 // =========================
