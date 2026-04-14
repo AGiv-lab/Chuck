@@ -130,6 +130,11 @@ function addUserFact() {
 
 function updateThreatResponse(event) {
   const selectedValue = event.target.value;
+  const seagalImage = document.querySelector(".seagal-img");
+
+  if (seagalImage) {
+    seagalImage.classList.remove("nemesis-active");
+  }
 
   if (selectedValue === "mild") {
     threatResponse.textContent = "Threat contained.";
@@ -139,6 +144,10 @@ function updateThreatResponse(event) {
     threatResponse.textContent = "Direct-to-DVD danger detected.";
   } else if (selectedValue === "nemesis") {
     threatResponse.textContent = "NEMESIS MODE CONFIRMED. GUARD YOUR DOJO.";
+
+    if (seagalImage) {
+      seagalImage.classList.add("nemesis-active");
+    }
   }
 }
 
