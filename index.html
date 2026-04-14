@@ -8,30 +8,23 @@
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-overlay">
-      <div class="hero-copy">
-        <p class="hero-kicker">World Phenomenon Of</p>
-        <h1>CHUCK</h1>
-        <p class="hero-subtitle"> Chuck Norris’ tears cure cancer. Too bad he has never cried.</p>
-      </div>
-
-      <div class="hero-character">
-        <!-- cartoon Chuck / leaves go here -->
-      </div>
-    </div>
-  </header>
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-character">
+    <!-- cartoon Chuck / leaves go here -->
+  </div>
+</header>
 
 <section class="carousel-section">
   <h2 class="visually-hidden">Chuck Gallery</h2>
 
-  <div class="carousel-track">
-    <article class="carousel-card">Slide 1</article>
-    <article class="carousel-card">Slide 2</article>
-    <article class="carousel-card">Slide 3</article>
-    <article class="carousel-card">Slide 4</article>
-    <article class="carousel-card">Slide 5</article>
-  </div>
+ <div class="carousel-track">
+  <article class="carousel-card slide-1"></article>
+  <article class="carousel-card slide-2"></article>
+  <article class="carousel-card slide-3"></article>
+  <article class="carousel-card slide-4"></article>
+  <article class="carousel-card slide-5"></article>
+</div>
 
   <div class="carousel-dots">
     <span class="dot active"></span>
@@ -42,94 +35,93 @@
   </div>
 </section>
   
-  <section class="history-section">
-    <h2>History of the Roundhouse</h2>
-    <div class="history-grid">
-      <article class="history-card">
-        <h3>Early Years</h3>
-        <p>From tournament fighter to martial arts icon</p>
-      </article>
-      <article class="history-card">
-        <h3>Action Hero Rise</h3>
-        <p>Bruce Lee and the big screen.</p>
-      </article>
-      <article class="history-card">
-        <h3>Walker, Texas Ranger</h3>
-        <p>Justice. Integrity. Roundhouse.</p>
-      </article>
-      <article class="history-card">
-        <h3>Internet Legend 2005+</h3>
-        <p>Memes bow. The world laughs.</p>
-      </article>
+<section class="history-section">
+  <h2>History of the Roundhouse</h2>
+  <div class="history-grid">
+    <article class="history-card">
+      <h3>Early Years</h3>
+      <p>From tournament fighter to martial arts icon</p>
+    </article>
+    <article class="history-card">
+      <h3>Action Hero Rise</h3>
+      <p>Bruce Lee and the big screen.</p>
+    </article>
+    <article class="history-card">
+      <h3>Walker, Texas Ranger</h3>
+      <p>Justice. Integrity. Roundhouse.</p>
+    </article>
+    <article class="history-card">
+      <h3>Internet Legend 2005+</h3>
+      <p>Memes bow. The world laughs.</p>
+    </article>
+  </div>
+</section>
+
+<main class="content-grid">
+  <section class="facts-section panel">
+    <h2>Facts About CN</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fact</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="facts-table-body"></tbody>
+    </table>
+
+    <button id="new-fact-btn">Summon New Fact</button>
+
+    <div class="fact-form">
+      <input type="text" id="user-fact" placeholder="Enter your Chuck fact" />
+      <input type="text" id="user-type" placeholder="Type (Myth, Legend, Meme)" />
+      <button id="add-fact-btn">Add Fact</button>
     </div>
   </section>
 
-   <main class="content-grid">
-    <section class="facts-section panel">
-      <h2>Facts About CN</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Fact</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody id="facts-table-body">
-          <tr>
-            <td>001</td>
-            <td>Chuck Norris counted to infinity. Twice.</td>
-            <td>Myth</td>
-          </tr>
-        </tbody>
-      </table>
-      <button id="new-fact-btn">Summon New Fact</button>
-    </section>
-
-     <section class="video-section panel">
-      <h2>Champs Vs. Seagal Sizzle reel</h2>
-      <div class="video-frame">
-        <iframe
-          width="100%"
-          height="315"
-          src="https://www.youtube.com/embed/F6jGgNKPaog"
-          title="Champs Vs. Seagal Sizzle Reel"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="video-caption">Chuck punches, Seagal packs.</p>
-    </section>
-
-
- <div class="right-col">
-
-  <section class="seagal-section panel">
-    <h2>Seagal Threat Level</h2>
-    <p>Select threat level:</p>
-
-    <form id="threat-form">
-      <label><input type="radio" name="threat" value="mild"> Mild squint</label><br>
-      <label><input type="radio" name="threat" value="ponytail"> Ponytail activated</label><br>
-      <label><input type="radio" name="threat" value="dvd"> Direct-to-DVD danger</label><br>
-      <label><input type="radio" name="threat" value="nemesis"> Full nemesis mode</label>
-    </form>
-
-    <p id="threat-response">Threat level pending...</p>
+  <section class="video-section panel">
+    <h2>Champs Vs. Seagal Sizzle reel</h2>
+    <div class="video-frame">
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/F6jGgNKPaog"
+        title="Champs Vs. Seagal Sizzle Reel"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-caption">Chuck punches, Seagal packs.</p>
   </section>
 
-  <section id="vote" class="panel">
-    <h2>Sensei Vote</h2>
+  <div class="right-col">
+    <section class="seagal-section panel">
+      <h2>Seagal Threat Level</h2>
+      <p>Select threat level:</p>
 
-    <form id="vote-form">
-      <label><input type="radio" name="sensei" value="chuck"> Chuck Norris</label><br>
-      <label><input type="radio" name="sensei" value="bruce"> Bruce Lee</label><br>
-      <label><input type="radio" name="sensei" value="seagal"> Steven Seagal</label>
-    </form>
+      <form id="threat-form">
+        <label><input type="radio" name="threat" value="mild"> Mild squint</label><br>
+        <label><input type="radio" name="threat" value="ponytail"> Ponytail activated</label><br>
+        <label><input type="radio" name="threat" value="dvd"> Direct-to-DVD danger</label><br>
+        <label><input type="radio" name="threat" value="nemesis"> Full nemesis mode</label>
+      </form>
 
-    <button id="submit-vote-btn">Submit Vote</button>
-    <p id="vote-response">Choose wisely.</p>
-  </section>
+      <p id="threat-response">Threat level pending...</p>
+    </section>
 
+    <section id="vote" class="panel">
+      <h2>Sensei Vote</h2>
+
+      <form id="vote-form">
+        <label><input type="radio" name="sensei" value="chuck"> Chuck Norris</label><br>
+        <label><input type="radio" name="sensei" value="bruce"> Bruce Lee</label><br>
+        <label><input type="radio" name="sensei" value="seagal"> Steven Seagal</label>
+      </form>
+
+      <button id="submit-vote-btn">Submit Vote</button>
+      <p id="vote-response">Choose wisely.</p>
+    </section>
   </div>
 </main>
 
@@ -137,5 +129,6 @@
     <p>The Chuck Whisperer 2026</p>
   </footer>
 
+  <script src="js/app.js"></script>
  </body>
 </html> 
