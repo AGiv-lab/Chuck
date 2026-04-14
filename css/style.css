@@ -1,0 +1,35 @@
+let userFactCount = 0;
+const MAX_USER_FACTS = 3;
+
+function addUserFact() {
+  const factText = userFactInput.value;
+  const factType = userTypeInput.value;
+
+  if (factText.trim() === "") {
+    alert("Enter a fact first!");
+    return;
+  }
+
+  if (userFactCount >= MAX_USER_FACTS) {
+    alert("Maximum of 3 custom facts reached!");
+    return;
+  }
+
+  const newFact = {
+    id: String(facts.length + 1).padStart(3, "0"),
+    fact: factText,
+    type: factType || "User"
+  };
+
+  facts.push(newFact); // 👈 adds to END (what you want)
+  userFactCount++;
+
+  userFactInput.value = "";
+  userTypeInput.value = "";
+
+  renderRandomFact();
+}
+
+if (userFactCount >= MAX_USER_FACTS) {
+  addFactButton.disabled = true;
+}
