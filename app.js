@@ -133,7 +133,7 @@ function addUserFact() {
 
 function updateThreatResponse(event) {
   const selectedValue = event.target.value;
-  const seagalImage = document.querySelector(".seagal-img");
+
 
   if (seagalImage) {
     seagalImage.classList.remove("nemesis-active");
