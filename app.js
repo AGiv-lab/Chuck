@@ -58,10 +58,10 @@ const userTypeInput = document.getElementById("user-type");
 
 const threatForm = document.getElementById("threat-form");
 const threatResponse = document.getElementById("threat-response");
+const seagalImage = document.querySelector(".seagal-img");
 
 const voteForm = document.getElementById("vote-form");
 const voteResponse = document.getElementById("vote-response");
-const submitVoteBtn = document.getElementById("submit-vote-btn");
 
 const videoPlayer = document.getElementById("video-player");
 const videoButtons = document.querySelectorAll(".video-controls button");
@@ -193,12 +193,14 @@ if (voteForm) {
   voteForm.addEventListener("submit", handleVote);
 }
 
-videoButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const videoId = button.getAttribute("data-video");
-    videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+if (videoPlayer && videoButtons.length > 0) {
+  videoButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const videoId = button.dataset.video;
+      videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+    });
   });
-});
+}
 
 // =========================
 // Initial Render
