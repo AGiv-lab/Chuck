@@ -137,9 +137,9 @@ body {
 .panel {
   border: 1px solid #ccc;
   padding: 1.25rem;
-  box-sizing: border-box;
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .right-col {
@@ -251,6 +251,18 @@ body {
   color: white;
   border-color: #333;
  box-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #ddd;
 }
 
 /* ── Footer ── */
