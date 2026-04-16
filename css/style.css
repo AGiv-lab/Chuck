@@ -247,45 +247,11 @@ body {
 }
 
 .video-controls button.active {
-  background: #2f4f2f;
-  color: white;
-  border-color: #2f4f2f;
-  box-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
-}
-
-/* ── Video ── */
-.video-frame iframe {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.video-controls {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.video-controls button {
-  flex: 1;
-  padding: 0.5rem;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background: #eee;
-  border-radius: 6px;
-  transition: 0.2s ease;
-}
-
-.video-controls button:hover {
-  background: #ddd;
-}
-
-.video-controls button.active {
   background: #333;
   color: white;
   border-color: #333;
  box-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
 }
-
 
 /* ── Footer ── */
 .site-footer {
