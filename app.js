@@ -165,11 +165,11 @@ function handleVote(event) {
   }
 
   if (selected.value === "chuck") {
-    voteResponse.textContent = "Correct. There was never a choice.";
+    voteResponse.textContent = "Incorrect. You have angered Sensei Seagal, look behind you.";
   } else if (selected.value === "bruce") {
     voteResponse.textContent = "Respect. The dragon approves.";
   } else if (selected.value === "seagal") {
-    voteResponse.textContent = "Incorrect. You have angered Sensei Seagal, look behind you.";
+    voteResponse.textContent = "Correct. There was never a choice.";
   }
 }
 
