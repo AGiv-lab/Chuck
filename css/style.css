@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #f3f3f3;
+  background: #1f2b1f;
   color: #111;
 }
 
@@ -17,7 +17,7 @@ body {
 
 /* ── Hero ── */
 .hero {
-  min-height: 400px;
+  min-height: 520px;
   background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center 20%;
@@ -38,6 +38,19 @@ body {
 .hero-character {
   position: relative;
   z-index: 1;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #d8c27a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #cdbb82;
+  margin-top: 0;
 }
 
 /* ── Carousel ── */
@@ -135,11 +148,11 @@ body {
 }
 
 .panel {
-  border: 1px solid #ccc;
-  padding: 1.25rem;
-  background: white;
+  background: rgba(37, 51, 37, 0.95);
+  border: 1px solid #6f6a43;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  padding: 1.25rem;
 }
 
 .right-col {
@@ -190,11 +203,13 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
+  color: #eadfb0;
+  background: rgba(22, 30, 22, 0.7);
 }
 
 .facts-section th,
 .facts-section td {
-  border: 1px solid #ccc;
+  border: 1px solid #5d5a3f;
   padding: 0.5rem;
   text-align: left;
   vertical-align: top;
@@ -203,7 +218,8 @@ body {
 .facts-section th {
   position: sticky;
   top: 0;
-  background: white;
+  background: #2e3a2a;
+  color: #d8c27a;
 }
 
 .fact-form {
@@ -247,22 +263,23 @@ body {
 }
 
 .video-controls button.active {
-  background: #333;
-  color: white;
-  border-color: #333;
- box-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
+  background: #2f4f2f;
+  color: #f2e6b8;
+  border-color: #9c8f58;
+  box-shadow: 0 0 10px rgba(120, 170, 90, 0.35);
 }
 
 button {
+  border: 1px solid #8f8350;
+  background: #b9a86a;
+  color: #1b1b1b;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  background: #eee;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 button:hover {
-  background: #ddd;
+  background: #c8b87a;
 }
 
 /* ── Footer ── */
