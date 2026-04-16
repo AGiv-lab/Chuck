@@ -180,6 +180,45 @@ body {
   width: 100%;
   margin-top: 0.5rem;
 }
+/* ── Facts ── */
+.facts-table-wrapper {
+  max-height: 430px;
+  overflow-y: auto;
+}
+
+.facts-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.facts-section th,
+.facts-section td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.facts-section th {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.fact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fact-form input,
+.fact-form button,
+#new-fact-btn,
+#submit-vote-btn {
+  padding: 0.5rem;
+  font: inherit;
+}
 
 /* ── Video ── */
 .video-frame iframe {
