@@ -1,23 +1,14 @@
 /* ── Base ── */
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: #1f2b1f;
-  color: #111;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  background: #18261a;
+  color: #e6d79d;
 }
 
 /* ── Hero ── */
 .hero {
-  min-height: 520px;
+  min-height: 400px;
   background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center 20%;
@@ -39,18 +30,21 @@ body {
   position: relative;
   z-index: 1;
 }
-
 h2 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   color: #d8c27a;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: left;
+  border-bottom: 1px solid #6c6842;
+  padding-bottom: 0.3rem;
 }
 
 h3 {
-  color: #cdbb82;
   margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #d8c27a;
 }
 
 /* ── Carousel ── */
@@ -74,19 +68,13 @@ h3 {
   scroll-snap-align: start;
   flex: 0 0 260px;
   height: 160px;
-  border: 1px solid #ccc;
+  border: 1px solid #6c6842;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: end;
-  justify-content: start;
-  padding: 0.5rem;
-  color: white;
-  font-weight: bold;
 }
 
 .slide-1 {
@@ -120,22 +108,32 @@ h3 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ccc;
+  background: #8d8553;
 }
 
 .dot.active {
-  background: #333;
+  background: #d8c27a;
 }
 
 /* ── History ── */
 .history-section {
   padding: 2rem;
+  border-top: 1px solid rgba(214, 124, 6, 0.2);
 }
 
 .history-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+.history-card {
+  padding: 0.75rem 0;
+  color: #e6d79d;
+}
+
+.history-card p {
+  color: #c9c19c;
 }
 
 /* ── Main Content Layout ── */
@@ -148,51 +146,23 @@ h3 {
 }
 
 .panel {
-  background: rgba(37, 51, 37, 0.95);
-  border: 1px solid #6f6a43;
+  background: rgba(25, 43, 27, 0.96);
+  border: 1px solid #6c6842;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.28);
+  inset 0 0 6px rgba(255, 255, 255, 0.03);
   padding: 1.25rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+  inset 0 0 6px rgba(255, 255, 255, 0.03);
 }
 
 .right-col {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
-.seagal-section,
-#vote {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.seagal-section label,
-#vote label {
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.seagal-img {
-  width: 100%;
-  max-width: 260px;
-  display: block;
-  margin: 0.5rem auto 1rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.seagal-img.nemesis-active {
-  box-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
-  filter: brightness(1.08);
-  transform: scale(1.03);
-}
-
-#submit-vote-btn {
-  width: 100%;
-  margin-top: 0.5rem;
-}
 /* ── Facts ── */
 .facts-table-wrapper {
   max-height: 430px;
@@ -204,12 +174,12 @@ h3 {
   border-collapse: collapse;
   margin-bottom: 1rem;
   color: #eadfb0;
-  background: rgba(22, 30, 22, 0.7);
+  background: rgba(18, 28, 18, 0.55);
 }
 
 .facts-section th,
 .facts-section td {
-  border: 1px solid #5d5a3f;
+  border: 1px solid #5e5a3b;
   padding: 0.5rem;
   text-align: left;
   vertical-align: top;
@@ -218,7 +188,7 @@ h3 {
 .facts-section th {
   position: sticky;
   top: 0;
-  background: #2e3a2a;
+  background: #243224;
   color: #d8c27a;
 }
 
@@ -236,10 +206,40 @@ h3 {
   font: inherit;
 }
 
+.fact-form input {
+  border: 1px solid #7a744c;
+  border-radius: 6px;
+  background: #f2f0e6;
+  color: #222;
+}
+
+/* ── Buttons ── */
+button {
+  border: 1px solid #8d8553;
+  background: #c5b26d;
+  color: #1b1b1b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: #d3bf7a;
+}
+
+#submit-vote-btn,
+#add-fact-btn,
+#new-fact-btn {
+  width: 100%;
+}
+
 /* ── Video ── */
 .video-frame iframe {
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  
 }
 
 .video-controls {
@@ -250,40 +250,60 @@ h3 {
 
 .video-controls button {
   flex: 1;
-  padding: 0.5rem;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background: #eee;
-  border-radius: 6px;
-  transition: 0.2s ease;
-}
-
-.video-controls button:hover {
-  background: #ddd;
 }
 
 .video-controls button.active {
   background: #2f4f2f;
   color: #f2e6b8;
-  border-color: #9c8f58;
-  box-shadow: 0 0 10px rgba(120, 170, 90, 0.35);
+  border-color: #9a8f59;
+  box-shadow: 0 0 10px rgba(109, 171, 82, 0.35);
 }
 
-button {
-  border: 1px solid #8f8350;
-  background: #b9a86a;
-  color: #1b1b1b;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s ease;
+.video-caption {
+  margin-top: 0.5rem;
+  color: #b8b08b;
+  font-size: 0.92rem;
 }
 
-button:hover {
-  background: #c8b87a;
+/* ── Right Column ── */
+.seagal-section,
+#vote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.seagal-section label,
+#vote label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #a7c43f;
+}
+
+.seagal-img {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 0.5rem auto 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.seagal-img.nemesis-active {
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
+  filter: brightness(1.08);
+  transform: scale(1.03);
+}
+
+#threat-response,
+#vote-response {
+  color: #cdbf86;
+  min-height: 1.2rem;
 }
 
 /* ── Footer ── */
 .site-footer {
   text-align: center;
   padding: 1rem;
+  color: #c7bb84;
 }
