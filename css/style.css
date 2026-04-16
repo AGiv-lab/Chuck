@@ -58,6 +58,7 @@ h3 {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -66,15 +67,16 @@ h3 {
 
 .carousel-card {
   scroll-snap-align: start;
-  flex: 0 0 260px;
-  height: 160px;
+  flex: 0 0 300px;
+  height: 180px;
   border: 1px solid #6c6842;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  outline: 2px solid red;
 }
 
 .slide-1 {
@@ -147,7 +149,6 @@ h3 {
 
 .panel {
   background: rgba(25, 43, 27, 0.96);
-  border: 1px solid #6c6842;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.28);
   inset 0 0 6px rgba(255, 255, 255, 0.03);
@@ -306,4 +307,98 @@ button:hover {
   text-align: center;
   padding: 1rem;
   color: #c7bb84;
+}
+
+/* ── Carousel Polish ── */
+
+/* Slightly larger + better spacing */
+.carousel-track {
+  gap:1.25rem;
+  padding: 0.5rem 0;
+}
+
+/* Card upgrade */
+.carousel-card {
+  flex: 0 0 280px; /* slightly wider */
+  height: 170px;   /* slightly taller */
+
+  border: 1px solid #8d8553;
+  border-radius: 8px;
+
+  box-shadow: 
+    0 4px 10px rgba(0,0,0,0.4);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.carousel-controls button {
+  background: #2f4f2f;
+  color: #f2e6b8;
+  border: 1px solid #8d8553;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: #3d6a3d;
+}
+
+/* Hover effect (feels interactive) */
+.carousel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 6px 16px rgba(0,0,0,0.6),
+    0 0 10px rgba(120, 170, 90, 0.25);
+}
+
+/* Optional: slight dark overlay for readability */
+.carousel-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.05)
+  );
+}
+
+.carousel-track {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dots polish */
+.carousel-dots {
+  margin-top: 1.25rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #6f6a43;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot.active {
+  background: #d8c27a;
+  transform: scale(1.2);
+}
+
+/* Optional: subtle section divider */
+.carousel-section {
+  border: none;
+  box-shadow: none;
 }

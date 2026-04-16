@@ -202,6 +202,20 @@ if (videoPlayer && videoButtons.length > 0) {
   });
 }
 
+const track = document.querySelector(".carousel-track");
+const leftBtn = document.getElementById("carousel-left");
+const rightBtn = document.getElementById("carousel-right");
+
+if (track && leftBtn && rightBtn) {
+  leftBtn.addEventListener("click", () => {
+    track.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  rightBtn.addEventListener("click", () => {
+    track.scrollBy({ left: 300, behavior: "smooth" });
+  });
+}
+
 // =========================
 // Initial Render
 // =========================
